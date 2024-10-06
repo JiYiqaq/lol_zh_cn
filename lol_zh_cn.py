@@ -22,19 +22,16 @@ if os.path.exists(file_path):
         with open(file_path, 'w', encoding='utf-8') as file:
             file.write(data)
 
-        print(f'文件 {file_path} 中的 locale 设置已修改为 "zh_CN"。')
         # 弹出消息框
         messagebox.showinfo("成功", "修改成功！")
         # 关闭窗口
         root.quit()
     else:
-        print('没有找到需要替换的 "locale: \"ja_JP\""。')
         # 弹出消息框
         messagebox.showinfo("错误", "没有找到需要替换的内容！")
         # 关闭窗口
         root.quit()
 else:
-    print(f'文件 {file_path} 不存在，请检查路径是否正确。')
     # 弹出消息框
     messagebox.showinfo("错误", "文件 {file_path} 不存在，请检查路径是否正确。！")
     # 关闭窗口
